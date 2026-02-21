@@ -20,7 +20,7 @@ fetch(url)
 let iconCode=data.weather[0].icon;
     let iconUrl=`https://openweathermap.org/img/wn/${iconCode}@2x.png`;
     let description=data.weather[0].description;
-    description=description.charAt(0).toUpperrCase()+description.slice(1);
+    description=description.charAt(0).toUpperCase()+description.slice(1);
 document.getElementById("result").innerHTML=
 `<h3>${data.name}</h3>
 <img src="${iconUrl}" alt="weather icon"><br>
@@ -28,10 +28,11 @@ Temperature:${data.main.temp}°C<br>
 weather:${description}`;
 })
 .catch(error=>{
-    document.getElentById("loader").style.display="none";
+    document.getElementById("loader").style.display="none";
 document.getElementById("result").innerHTML="city not found!";
 });
 
 }
+
 
 
