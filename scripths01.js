@@ -3,12 +3,12 @@ let city=document.getElementById("city").value;
     
 let apiKey="d5fe0a7b4ec664761995f3a04abb30a4";
     if(city===""){
-        document.getElementById("result").iinerHTML="please enter a city name";
+        document.getElementById("result").innerHTML="please enter a city name";
         return;
     }
 let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     document.getElementById("loader").style.display="block";
-    document.getElementByid("result").innerHTML="";
+    document.getElementById("result").innerHTML="";
 fetch(url)
 .then(response=>response.json())
 .then(data=>{
@@ -33,4 +33,5 @@ document.getElementById("result").innerHTML="city not found!";
 });
 
 }
+
 
