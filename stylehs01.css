@@ -1,5 +1,5 @@
 body{
-font-family:TimesNewRoman;
+font-family:"Times New Roman",Serif;
 align-items:center;
 justify-content:center;
 height:100vh;
@@ -39,11 +39,12 @@ font-size:18px;
   margin-top:20px;
   font-size:18px;
   font-weight:bold;
-  animation:blink is infinite;
+  animation:blink 1s infinite;
 }
 @keyframes blink{
   0%{opacity:1;}
   50%{opacity:0.3;}
   100%{opacity:1;}
 }
+
 
